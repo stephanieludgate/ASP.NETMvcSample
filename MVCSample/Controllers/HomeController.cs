@@ -35,7 +35,8 @@ namespace MVCSample.Controllers
             ViewBag.Message = $"Hello from User_{number}.";
             ViewBag.MyList = myList;
 
-            return View();
+            return View(); // can return a different view: return View("Index") **URL will remain Home/Steph/number
+            // We can also use return RedirectToAction("Contact") ** URL will be Home/Contact
         }
 
         public string HelloWorld(string firstName, string lastName)
